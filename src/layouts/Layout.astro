@@ -24,6 +24,9 @@ const { title } = Astro.props as Props
     <script src="/src/pwa.ts"></script>
     {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
     <style>
+      .div{position: fixed;
+    z-index: 10001;
+}
 /* 定义折叠块的样式 */
       details {
         margin: 1rem 0;
@@ -31,7 +34,6 @@ const { title } = Astro.props as Props
         background-color: #f6f8fa;
         border: 1px solid #ccc;
         border-radius: 0.5rem;
-        position:fixed;
       }
       summary {
         font-weight: bold;
@@ -41,7 +43,7 @@ const { title } = Astro.props as Props
     </style>
   </head>
   <body>
-    <div><details>
+    <div class="div"><details>
       <summary>使用文档</summary>
       <p>
     <details>
