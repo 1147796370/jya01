@@ -39,6 +39,7 @@ const { title } = Astro.props as Props
     </style>
   </head>
   <body>
+    <slot />
     <details>
       <summary>使用方法</summary>
       <p>左下角小齿轮
@@ -60,6 +61,5 @@ Enter发送，Shift+Enter换行。
 ↑ 将最近的一次提问填到输入框里。
 点击顶部标题滚动到顶部，点击输入框滚动到底部。</p>
     </details>
-    <slot />
   </body>
 </html>
