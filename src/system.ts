@@ -21,7 +21,7 @@ export const defaultMessage = `Powered by OpenAI Vercel
 <details>
 <summary>展开/收起</summary>
 
-export  const  defaultMessage  =  `网站使用方法
+export  const  defaultMessage  = { `网站使用方法
 左下角小齿轮
 
 系统角色指令：会在每次提问时添加。主要用于对 ChatGPT 的语气，口头禅这些进行定制。
@@ -53,6 +53,7 @@ Enter发送，Shift+Enter换行。
 点击顶部标题滚动到顶部，点击输入框滚动到底部。`
 
 </details>
+}
 
 export type Setting = typeof defaultSetting
 
