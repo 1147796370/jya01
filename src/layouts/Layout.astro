@@ -40,6 +40,9 @@ const { title } = Astro.props as Props
   </head>
   <body>
     <details>
+      <summary>主折叠块</summary>
+      <p>
+    <details>
       <summary>折叠块1</summary>
       <p>折叠块1的内容</p>
     </details>
@@ -51,6 +54,7 @@ const { title } = Astro.props as Props
       <summary>折叠块3</summary>
       <p>折叠块3的内容</p>
     </details>
+        <p>
     <slot />
   </body>
 </html>
