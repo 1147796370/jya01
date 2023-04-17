@@ -10,11 +10,10 @@ export const defaultSetting = {
   model: "gpt-3.5-turbo" as Model
 }
 
-export const defaultMessage = `Powered by OpenAI Vercel
-- 本网站基于ChatGPT和Github开源项目制作 
-- 仅供独众传媒内部使用 切勿外传 避免网站被封！！！
-- 本网站由何高阳开发与维护，未经允许不得用于商业用途
-- 在使用过程中遇到任何问题可以联系本人[QQ](https://qm.qq.com/cgi-bin/qm/qr?k=9sBonSEvwvNEA-vLiJHZpL4sAD2DouCW&noverify=0&personal_qrcode_source=4)
+export const defaultMessage = `个人终身版
+- 编程，文案，脚本，数据分析，数据统计，各种语言翻译，娱乐
+- 陪聊，陪伴，娱乐，学习工作两不误！
+- 注意事项：不要同时两个ip登录，一旦检测到就容易封号
 ==================================
 -[[Shift]] + [[Enter]] 换行。开头输入 [[/]]提问辅助`
 
