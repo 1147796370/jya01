@@ -66,28 +66,33 @@ if (_) {
   }
 }
 
-const pwd = import.meta.env.PASSWORD
+const pwd1 = import.meta.env.PASSWORD1
+const pwd2 = import.meta.env.PASSWORD2
+const pwd3 = import.meta.env.PASSWORD3
+const pwd4 = import.meta.env.PASSWORD4
+const pwd5 = import.meta.env.PASSWORD5
 
 export const post: APIRoute = async context => {
-  try {
-    const body: {
-      messages?: ChatMessage[]
-      key?: string
-      temperature: number
-      password?: string
-      model: Model
-    } = await context.request.json()
-    const {
-      messages,
-      key = localKey,
-      temperature = 0.6,
-      password,
-      model = defaultModel
-    } = body
+try {
+const body: {
+messages?: ChatMessage[]
+key?: string
+temperature: number
+password?: string
+model: Model
+} = await context.request.json()
+const {
+messages,
+key = localKey,
+temperature = 0.6,
+password,
+model = defaultModel
+} = body
 
-    if (pwd && pwd !== password) {
-      throw new Error("密码错误，请联系网站管理员。")
-    }
+if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)) {
+  throw new Error("密码错误，请联系网站管理员。")
+}
+
 
     if (!messages?.length) {
       throw new Error("没有输入任何文字。")
