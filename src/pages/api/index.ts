@@ -71,6 +71,23 @@ const pwd2 = import.meta.env.PASSWORD2
 const pwd3 = import.meta.env.PASSWORD3
 const pwd4 = import.meta.env.PASSWORD4
 const pwd5 = import.meta.env.PASSWORD5
+const pwd6 = import.meta.env.PASSWORD6
+const pwd7 = import.meta.env.PASSWORD7
+const pwd8 = import.meta.env.PASSWORD8
+const pwd9 = import.meta.env.PASSWORD9
+const pwd10 = import.meta.env.PASSWORD10
+const pwd11 = import.meta.env.PASSWORD11
+const pwd12 = import.meta.env.PASSWORD12
+const pwd13 = import.meta.env.PASSWORD13
+const pwd14 = import.meta.env.PASSWORD14
+const pwd15 = import.meta.env.PASSWORD15
+const pwd16 = import.meta.env.PASSWORD16
+const pwd17 = import.meta.env.PASSWORD17
+const pwd18 = import.meta.env.PASSWORD18
+const pwd19 = import.meta.env.PASSWORD19
+const pwd20 = import.meta.env.PASSWORD20
+
+
 
 export const post: APIRoute = async context => {
 try {
@@ -89,7 +106,14 @@ password,
 model = defaultModel
 } = body
 
-if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)) {
+if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)
+(pwd6 && pwd6 !== password) && (pwd7 && pwd7 !== password) && (pwd8 && pwd8 !== password) && (pwd9 && pwd9 !== password) && (pwd10 && pwd10 !== password)
+(pwd11 && pwd11 !== password) && (pwd12 && pwd12 !== password) && (pwd13 && pwd13 !== password) && (pwd14 && pwd14 !== password) && (pwd15 && pwd15 !== password)
+(pwd16 && pwd16 !== password) && (pwd17 && pwd17 !== password) && (pwd18 && pwd18 !== password) && (pwd19 && pwd19 !== password) && (pwd20 && pwd20 !== password)
+   
+   
+   
+   ) {
   throw new Error("密码错误，请联系网站管理员。")
 }
 
