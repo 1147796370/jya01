@@ -75,12 +75,6 @@ const pwd6 = import.meta.env.PASSWORD6
 const pwd7 = import.meta.env.PASSWORD7
 const pwd8 = import.meta.env.PASSWORD8
 const pwd9 = import.meta.env.PASSWORD9
-const pwd10 = import.meta.env.PASSWORD10
-const pwd11 = import.meta.env.PASSWORD11
-const pwd12 = import.meta.env.PASSWORD12
-const pwd13 = import.meta.env.PASSWORD13
-const pwd14 = import.meta.env.PASSWORD14
-const pwd15 = import.meta.env.PASSWORD15
 
 
 
@@ -102,8 +96,7 @@ model = defaultModel
 } = body
 
 if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)
-(pwd6 && pwd6 !== password) && (pwd7 && pwd7 !== password) && (pwd8 && pwd8 !== password) && (pwd9 && pwd9 !== password) && (pwd10 && pwd10 !== password)
-(pwd11 && pwd11 !== password) && (pwd12 && pwd12 !== password) && (pwd13 && pwd13 !== password) && (pwd14 && pwd14 !== password) && (pwd15 && pwd15 !== password)
+(pwd6 && pwd6 !== password) && (pwd7 && pwd7 !== password) && (pwd8 && pwd8 !== password) && (pwd9 && pwd9 !== password)
    
    
    
