@@ -95,7 +95,7 @@ password,
 model = defaultModel
 } = body
 
-if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)
+if ((pwd1 && pwd1 !== password) && (pwd2 && pwd2 !== password) && (pwd3 && pwd3 !== password) && (pwd4 && pwd4 !== password) && (pwd5 && pwd5 !== password)&&
 (pwd6 && pwd6 !== password) && (pwd7 && pwd7 !== password) && (pwd8 && pwd8 !== password) && (pwd9 && pwd9 !== password)
    
    
