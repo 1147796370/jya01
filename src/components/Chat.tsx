@@ -378,17 +378,19 @@ export default function (props: {
 //       console.error(error);
 //     }
 //   }
-  async function playText(text, num) {
+ async function playText(text, num) {
 const API_KEY = "VlOOvBsWemGGjtqTjE5iliAa";
 const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
 const TOKEN_URL = `https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${API_KEY}&client_secret=${SECRET_KEY}`;
-const TTS_URL = 'https://tsn.baidu.com/text2audio';
+const TTS_URL = 'http://tsn.baidu.com/text2audio';
 
 let token = '';
 
 try {
 const response = await fetch(TOKEN_URL, {
-mode: 'cors' // 添加CORS选项
+headers: {
+'Origin': 'https://jya01.vercel.app' // 添加Origin头部
+}
 });
 const data = await response.json();
 token = data.access_token;
@@ -399,7 +401,7 @@ console.error(error);
 try {
 const url = `${TTS_URL}?tex=${encodeURIComponent(text)}&tok=${token}&cuid=123456&ctp=1&lan=zh&spd=5&per=${num}`;
 const response = await fetch(url, {
-mode: 'cors' // 添加CORS选项
+mode: 'cors'
 });
 const blob = await response.blob();
 const audio = new Audio();
