@@ -387,7 +387,9 @@ const TTS_URL = 'https://tsn.baidu.com/text2audio';
 let token = '';
 
 try {
-const response = await fetch(TOKEN_URL);
+const response = await fetch(TOKEN_URL, {
+mode: 'cors' // 添加CORS选项
+});
 const data = await response.json();
 token = data.access_token;
 } catch (error) {
