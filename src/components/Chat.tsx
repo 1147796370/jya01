@@ -381,8 +381,8 @@ export default function (props: {
   async function playText(text, num) {
 const API_KEY = "VlOOvBsWemGGjtqTjE5iliAa";
 const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
-const TOKEN_URL = https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${API_KEY}&client_secret=${SECRET_KEY};
-const TTS_URL = 'http://tsn.baidu.com/text2audio';
+const TOKEN_URL = `https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${API_KEY}&client_secret=${SECRET_KEY}`;
+const TTS_URL = 'https://tsn.baidu.com/text2audio';
 
 let token = '';
 
@@ -395,7 +395,7 @@ console.error(error);
 }
 
 try {
-const url = ${TTS_URL}?tex=${encodeURIComponent(text)}&tok=${token}&cuid=123456&ctp=1&lan=zh&spd=5&per=${num};
+const url = `${TTS_URL}?tex=${encodeURIComponent(text)}&tok=${token}&cuid=123456&ctp=1&lan=zh&spd=5&per=${num}`;
 const response = await fetch(url, {
 mode: 'cors' // 添加CORS选项
 });
