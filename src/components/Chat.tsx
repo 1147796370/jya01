@@ -258,6 +258,7 @@ export default function (props: {
     const reader = data.getReader()
     const decoder = new TextDecoder("utf-8")
     let done = false
+    let mess = ""
 
     while (!done) {
       const { value, done: readerDone } = await reader.read()
@@ -267,10 +268,20 @@ export default function (props: {
           continue
         }
         if (char) {
+          mess += char
           setCurrentAssistantMessage(currentAssistantMessage() + char)
         }
       }
       done = readerDone
+    }
+    const selectValue = setting().selectValue
+    if(selectValue==""){
+      selectValue=5003
+      playText(mess, selectValue)
+    }else if(selectValue=="GB"){
+
+    }else{
+      playText(mess, selectValue)
     }
   }
 
