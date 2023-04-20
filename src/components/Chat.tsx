@@ -354,7 +354,7 @@ export default function (props: {
     const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
     const TOKEN_URL =
       `https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${API_KEY}&client_secret=${SECRET_KEY}`;
-    const TTS_URL = 'http://tsn.baidu.com/text2audio';
+    const TTS_URL = 'https://tsn.baidu.com/text2audio';
   
     let token = '';
   
