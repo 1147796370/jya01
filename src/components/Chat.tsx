@@ -276,8 +276,7 @@ export default function (props: {
     }
     const selectValue = setting().selectValue
     if(selectValue==""){
-      selectValue=5003
-      playText(mess, selectValue)
+      playText(mess, 5003)
     }else if(selectValue=="GB"){
 
     }else{
@@ -348,6 +347,36 @@ export default function (props: {
     const { value } = inputRef
     setInputContent(value)
     findPrompts(value)
+  }
+  
+  async function playText(text, num) {
+    const API_KEY = "VlOOvBsWemGGjtqTjE5iliAa";
+    const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
+    const TOKEN_URL =
+      `https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=${API_KEY}&client_secret=${SECRET_KEY}`;
+    const TTS_URL = 'http://tsn.baidu.com/text2audio';
+  
+    let token = '';
+  
+    try {
+      const response = await fetch(TOKEN_URL);
+      const data = await response.json();
+      token = data.access_token;
+    } catch (error) {
+      console.error(error);
+    }
+  
+    try {
+      const url =
+        `${TTS_URL}?tex=${encodeURIComponent(text)}&tok=${token}&cuid=123456&ctp=1&lan=zh&spd=5&per=${num}`;
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const audio = new Audio();
+      audio.src = URL.createObjectURL(blob);
+      audio.play();
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
