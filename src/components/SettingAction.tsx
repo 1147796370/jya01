@@ -70,6 +70,30 @@ export default function SettingAction(props: {
               <option value="gpt-4-32k">gpt-4(32k)</option>
             </select>
           </SettingItem>
+          <SettingItem
+            icon="i-carbon:user-online"
+            label="精品语音助手"
+          >
+            <select
+              class="max-w-150px w-full bg-slate bg-op-15 rounded-sm appearance-none accent-slate text-center  focus:bg-op-20 focus:ring-0 focus:outline-none"
+              value={props.setting().selectValue}
+              onChange={e => {
+                props.setSetting({
+                  ...props.setting(),
+                  selectValue: (e.target as HTMLSelectElement).value as selectValue
+                })
+              }}
+            >
+              <option value="5003">度逍遥</option>
+              <option value="5118">度小鹿</option>
+              <option value="106">度博文</option>
+              <option value="110">度小童</option>
+              <option value="111">度小萌</option>
+              <option value="103">度米朵</option>
+              <option value="5">度小娇</option>
+              <option value="GB">关闭语音</option>
+            </select>
+          </SettingItem>
           <SettingItem icon="i-carbon:user-online" label="系统角色指令">
             <input
               type="text"
