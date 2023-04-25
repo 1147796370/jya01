@@ -65,6 +65,8 @@ dependencies:
   markdown-it-katex: 2.0.3
   markdown-it-kbd: 2.2.2
   solid-js: 1.6.15
+  microsoft-cognitiveservices-speech-sdk: 1.27.0
+	node-record-lpcm16: 1.0.1
 
 devDependencies:
   '@iconify-json/carbon': 1.1.16
