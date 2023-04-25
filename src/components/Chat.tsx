@@ -9,6 +9,7 @@ import throttle from "just-throttle"
 import { isMobile } from "~/utils"
 import type { Setting } from "~/system"
 import { makeEventListener } from "@solid-primitives/event-listener"
+import OPOP from "./wryy.js";
 
 export default function (props: {
   prompts: PromptItem[]
@@ -276,11 +277,11 @@ export default function (props: {
     }
     const selectValue = setting().selectValue
     if(selectValue==""){
-      playText(mess, 5003)
+      OPOP(mess, 'zh-CN-XiaoxiaoNeural')
     }else if(selectValue=="GB"){
 
     }else{
-      playText(mess, selectValue)
+      OPOP(mess, 'zh-CN-XiaoxiaoNeural')
     }
   }
 
