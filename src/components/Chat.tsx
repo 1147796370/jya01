@@ -278,7 +278,7 @@ export default function (props: {
     if(selectValue==""){
       playText(mess, 5003)
     }else if(selectValue=="GB"){
-const myVar = process.env.MY_VAR;
+const myVar =window.env.MY_VAR;
 console.log(myVar)
     }else{
       playText(mess, selectValue)
