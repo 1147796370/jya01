@@ -5,7 +5,7 @@ import { copyToClipboard, dateFormat, isMobile } from "~/utils"
 import type { ChatMessage, Model } from "~/types"
 import type { Setting } from "~/system"
 import { clickOutside } from "~/hooks"
-
+const apiKey = process.env.API_KEY
 export default function SettingAction(props: {
   setting: Accessor<Setting>
   setSetting: Setter<Setting>
@@ -84,7 +84,7 @@ export default function SettingAction(props: {
                 })
               }}
             >
-              <option value="5003">度逍遥</option>
+              <option value="5003">{{apiKey}}</option>
               <option value="5118">度小鹿</option>
               <option value="106">度博文</option>
               <option value="110">度小童</option>
