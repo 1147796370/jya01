@@ -348,7 +348,11 @@ export default function (props: {
     setInputContent(value)
     findPrompts(value)
   }
+  function fetch() {
+const apiKey = process.env.API_KEY1;
+  console.log(apiKey)
   
+}
   async function playText(text, num) {
     const API_KEY = "VlOOvBsWemGGjtqTjE5iliAa";
     const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
@@ -381,7 +385,7 @@ export default function (props: {
 
   return (
     <div ref={containerRef!} class="mt-4">
-       <button onClick={}>按键</button>
+       <button onClick={fetch()}>按键</button>
       <div class="px-1em mb-6em">
         <div
           id="message-container"
