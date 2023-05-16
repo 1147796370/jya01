@@ -385,7 +385,7 @@ const apiKey = process.env.API_KEY1;
 
   return (
     <div ref={containerRef!} class="mt-4">
-       <button onClick={fetch()}>按键</button>
+       
       <div class="px-1em mb-6em">
         <div
           id="message-container"
@@ -531,6 +531,7 @@ const apiKey = process.env.API_KEY1;
                   onClick={() => sendMessage()}
                   class="i-carbon:send-filled text-5 mx-3"
                 />
+                  <button class="i-carbon:send-filled text-5 mx-3" onClick={fetch()}>按键</button>
               </div>
             </div>
           </Show>
