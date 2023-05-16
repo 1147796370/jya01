@@ -278,7 +278,8 @@ export default function (props: {
     if(selectValue==""){
       playText(mess, 5003)
     }else if(selectValue=="GB"){
-
+const myVar = process.env.MY_VAR;
+console.log(myVar)
     }else{
       playText(mess, selectValue)
     }
@@ -348,11 +349,7 @@ export default function (props: {
     setInputContent(value)
     findPrompts(value)
   }
-  function fetch() {
-const apiKey = process.env.API_KEY1;
-  console.log(apiKey)
   
-}
   async function playText(text, num) {
     const API_KEY = "VlOOvBsWemGGjtqTjE5iliAa";
     const SECRET_KEY = "OXUP5leZICgcC5t4N7jXbMEtj6eCggc9";
@@ -385,7 +382,6 @@ const apiKey = process.env.API_KEY1;
 
   return (
     <div ref={containerRef!} class="mt-4">
-       
       <div class="px-1em mb-6em">
         <div
           id="message-container"
@@ -528,10 +524,9 @@ const apiKey = process.env.API_KEY1;
               >
                 <button
                   title="发送"
-                  onClick={() => fetch()}
+                  onClick={() => sendMessage()}
                   class="i-carbon:send-filled text-5 mx-3"
                 />
-                
               </div>
             </div>
           </Show>
